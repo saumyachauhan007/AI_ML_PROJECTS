@@ -502,6 +502,9 @@ with right:
                     st.session_state.output = (res.stderr or res.stdout).strip()
                     st.session_state.out_type = "fail"
             except subprocess.TimeoutExpired:
+
+
+                
                 st.session_state.output = "⏱  Time Limit Exceeded — check for infinite loops."
                 st.session_state.out_type = "fail"
             except Exception as e:
